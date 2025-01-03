@@ -4,13 +4,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const goalInput = document.getElementById('goalInput');
     const goalList = document.getElementById('goalList');
     const commitButton = document.getElementById('commitButton');
+    const userInfo = document.getElementById('userInfo');
     let githubToken = null;
 
     loginButton.addEventListener('click', () => {
         const authWindow = window.open('https://daily-goals-tracker-server-hzzepq7hw-dipaks-projects-4dd0a14a.vercel.app/login', 'GitHub Auth', 'width=600,height=400');
         window.addEventListener('message', (event) => {
             githubToken = event.data.token;
+            const username = event.data.username;
+            const avatarUrl = event.data.avatarUrl;
+
             if (githubToken) {
+                // Store the token locally for further use
+                localStorage.setItem('githubToken', githubToken);
+
+                // Display user information
+                userInfo.innerHTML = `<p>Welcome, ${username}!</p> <img src="${avatarUrl}" alt="User Photo" width="50" height="50">`;
+
                 loginButton.style.display = 'none';
                 goalForm.style.display = 'block';
                 goalList.style.display = 'block';
@@ -50,7 +60,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function commitToGitHub() {
         const goals = JSON.parse(localStorage.getItem('goals'));
-        if (goals) {
+        const githubToken = localStorage.getItem('githubToken');
+        if (goals && githubToken) {
             fetch('https://api.github.com/repos/Deadpool608/daily-goals-tracker/contents/goals.json', {
                 method: 'PUT',
                 headers: {
