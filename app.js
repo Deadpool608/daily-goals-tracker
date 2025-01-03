@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let githubToken = null;
 
     loginButton.addEventListener('click', () => {
-        const authWindow = window.open('https://daily-goals-tracker-server.vercel.app/login', 'GitHub Auth', 'width=600,height=400');
+        const authWindow = window.open('https://daily-goals-tracker-server.vercel.app', 'GitHub Auth', 'width=600,height=400');
         window.addEventListener('message', (event) => {
             githubToken = event.data.token;
             if (githubToken) {
