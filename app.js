@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 localStorage.setItem('githubToken', githubToken);
 
                 // Display user information
+                userInfo.style.display = 'block';
                 userInfo.innerHTML = `<p>Welcome, ${username}!</p> <img src="${avatarUrl}" alt="User Photo" width="50" height="50">`;
 
                 loginButton.style.display = 'none';
