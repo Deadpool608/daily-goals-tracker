@@ -4,19 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Goals Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Daily Goals Tracker for all Github enthusiast</h1>
-        <button id="loginButton">Login with GitHub</button>
-        <form id="goalForm" class="goal-form" style="display: none;">
-            <input type="text" id="goalInput" placeholder="Enter your goal" required>
-            <button type="submit">Add Goal</button>
-        </form>
-        <ul id="goalList" class="goal-list" style="display: none;"></ul>
-        <button id="commitButton" class="commit-button" style="display: none;">Commit to GitHub</button>
-    </div>
+    <header>
+        <nav>
+            <div class="nav-brand">Daily Goals Tracker</div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="nav-author">
+                <p>Author: Deadpool608</p>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Track Your Daily Goals</h1>
+            <button id="loginButton">Login with GitHub</button>
+            <div id="userInfo" class="user-info" style="display: none;"></div>
+            <form id="goalForm" class="goal-form glass-effect" style="display: none;">
+                <input type="text" id="goalInput" placeholder="Enter your goal" required>
+                <button type="submit">Add Goal</button>
+            </form>
+            <ul id="goalList" class="goal-list" style="display: none;"></ul>
+            <button id="commitButton" class="commit-button" style="display: none;">Commit to GitHub</button>
+        </div>
+    </main>
 
     <script src="app.js"></script>
 </body>
