@@ -9,28 +9,24 @@
 <body>
     <header>
         <nav>
-            <div class="nav-brand">Daily Goals Tracker</div>
-            <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-            <div class="nav-author">
-                <p>Author: Deadpool608</p>
+            <div class="nav-content">
+                <img src="logo.png" alt="App Logo" class="app-logo">
+                <h1 class="app-title">Daily Goals Tracker</h1>
             </div>
         </nav>
     </header>
     <main>
-        <div class="container">
-            <h1>Track Your Daily Goals</h1>
-            <button id="loginButton">Login with GitHub</button>
-            <div id="userInfo" class="user-info" style="display: none;"></div>
-            <form id="goalForm" class="goal-form glass-effect" style="display: none;">
-                <input type="text" id="goalInput" placeholder="Enter your goal" required>
-                <button type="submit">Add Goal</button>
-            </form>
-            <ul id="goalList" class="goal-list" style="display: none;"></ul>
-            <button id="commitButton" class="commit-button" style="display: none;">Commit to GitHub</button>
+        <div class="container glass-effect">
+            <div class="author-info">
+                <p>Author: <a href="https://github.com/Deadpool608" target="_blank">Deadpool608</a></p>
+            </div>
+            <div class="project-info">
+                <p>Welcome to Daily Goals Tracker! This application helps you track and achieve your daily goals efficiently.</p>
+                <p>Please login to get started:</p>
+            </div>
+            <button id="loginButton" class="login-button">
+                <img src="github-logo.png" alt="GitHub Logo" class="github-logo"> Login with GitHub
+            </button>
         </div>
     </main>
 

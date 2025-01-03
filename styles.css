@@ -3,11 +3,12 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background: url('background-image.jpg') no-repeat center center fixed;
+    background: linear-gradient(135deg, #f0f8ff, #e6e6fa);
     background-size: cover;
-    color: #fff;
+    color: #333;
 }
 
+/* Navbar styling */
 header {
     background-color: rgba(0, 0, 0, 0.8);
     padding: 10px;
@@ -17,107 +18,79 @@ header {
     left: 0;
     right: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-brand {
+.nav-content {
+    display: flex;
+    align-items: center;
+}
+
+.app-logo {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.app-title {
     font-size: 1.5em;
     font-weight: bold;
-}
-
-.nav-links {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li {
-    display: inline;
-}
-
-.nav-links a {
     color: #fff;
-    text-decoration: none;
 }
 
-.nav-author {
-    margin-left: auto;
-    font-size: 1em;
-}
-
+/* Container styling */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    min-height: 100vh;
     text-align: center;
-    padding-top: 60px; /* Offset for the fixed navbar */
-}
-
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 1em;
-    margin: 10px;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-.goal-form {
-    margin-top: 20px;
-}
-
-.goal-form input {
-    padding: 10px;
-    font-size: 1em;
-    border-radius: 5px;
-    border: none;
-    margin-right: 10px;
-}
-
-.goal-list {
-    list-style: none;
-    padding: 0;
-    margin-top: 20px;
-}
-
-.goal-list li {
-    background-color: rgba(255, 255, 255, 0.1);
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-}
-
-/* Glass effect style */
-.glass-effect {
+    padding: 20px;
+    margin-top: 60px; /* Offset for the fixed navbar */
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.user-info {
-    margin-top: 20px;
+/* Author and project info styling */
+.author-info, .project-info {
+    margin-bottom: 20px;
 }
 
-.user-info img {
-    border-radius: 50%;
-    margin-left: 10px;
+.author-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.author-info a:hover {
+    text-decoration: underline;
+}
+
+/* Button styling */
+.login-button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.login-button:hover {
+    background-color: #218838;
+}
+
+.github-logo {
+    height: 20px;
+    margin-right: 10px;
 }
