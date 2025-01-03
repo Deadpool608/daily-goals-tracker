@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let githubToken = null;
 
     loginButton.addEventListener('click', () => {
-        const authWindow = window.open('https://daily-goals-tracker-server.vercel.app/login', 'GitHub Auth', 'width=600,height=400');
+        const authWindow = window.open('https://daily-goals-tracker-server-hzzepq7hw-dipaks-projects-4dd0a14a.vercel.app/login', 'GitHub Auth', 'width=600,height=400');
         window.addEventListener('message', (event) => {
             githubToken = event.data.token;
             if (githubToken) {
@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function commitToGitHub() {
         const goals = JSON.parse(localStorage.getItem('goals'));
         if (goals) {
-            fetch('https://api.github.com/repos/deadpool608/daily-goals-tracker/contents/goals.json', {
+            fetch('https://api.github.com/repos/Deadpool608/daily-goals-tracker/contents/goals.json', {
                 method: 'PUT',
                 headers: {
                     'Authorization': `token ${githubToken}`,
